@@ -1,3 +1,6 @@
 [submodule "src/wt61c_uart"]
 	path = src/wt61c_uart
 	url = https://github.com/bigMH/wt61c_uart
+[submodule "src/velodyne"]
+	path = src/velodyne
+	url = https://github.com/ros-drivers/velodyne
