@@ -1,0 +1,18 @@
+<launch>
+  <param name="robot_description" textfile="$(find velodyne_record)/urdf/sensor_suite.urdf" />
+
+  <!-- Run Robot State Publisher -->	
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+  <!-- Run Velodyne Driver -->
+  <include file="$(find velodyne_pointcloud)/launch/VLP16_points.launch">
+  </include>
+
+  <!-- Run wt61c Driver -->
+  <include file="$(find wt61c_uart)/launch/wt61c_uart_bringup.launch">
+  </include>
+
+  <!-- Run Rviz (Display) -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find velodyne_record)/rviz/monitor.rviz"/>
+
+</launch>

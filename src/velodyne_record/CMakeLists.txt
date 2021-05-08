@@ -155,6 +155,7 @@ install(FILES
 )
 
 install(DIRECTORY
+    urdf
     rviz
     launch
     DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
