@@ -1,0 +1,14 @@
+<launch>
+
+  <!-- Run Velodyne Driver -->
+  <include file="$(find velodyne_pointcloud)/launch/VLP16_points.launch">
+  </include>
+
+  <!-- Run wt61c Driver -->
+  <include file="$(find wt61c_uart)/launch/wt61c_uart_bringup.launch">
+  </include>
+
+  <!-- Run Rviz (Display) -->
+  <!--node name="rviz" pkg="rviz" type="rviz" args="-d $(find gazebo_velodyne_slam)/rviz/octomap.rviz"/-->
+
+</launch>
