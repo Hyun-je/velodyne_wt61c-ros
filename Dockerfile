@@ -13,6 +13,9 @@ RUN apt-get update && apt-get install -y \
     ros-melodic-turtlebot3 \
     ros-melodic-turtlebot3-simulations
 
-RUN mkdir -p /root/catkin_ws/src
+RUN mkdir -p /root/catkin_ws
 WORKDIR /root/catkin_ws
 RUN /bin/bash -c "source /opt/ros/melodic/setup.bash"
+
+RUN mkdir -p /root/catkin_ws/velodyne-record
+COPY ./src /root/catkin_ws/velodyne-record
