@@ -1,5 +1,5 @@
 <launch>
-  <param name="robot_description" textfile="$(find velodyne_record)/urdf/sensor_suite.urdf" />
+  <param name="robot_description" textfile="$(find velodyne_wt61c)/urdf/sensor_suite.urdf" />
 
   <!-- Run Robot State Publisher -->	
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
@@ -13,7 +13,7 @@
   </include>
   
   <!-- Run Rviz (Display) -->
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find velodyne_record)/rviz/monitor.rviz"/>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find velodyne_wt61c)/rviz/monitor.rviz"/>
 
   <!-- Run Rosbag -->
   <node pkg="rosbag" type="record" args="-a -o $(env HOME)/rosbag/ /velodyne_points /orientation_acceleration" name="record" output="screen"/>
