@@ -9,7 +9,7 @@
 sudo apt-get install ros-melodic-velodyne ros-melodic-serial
 
 # 2. Clone source code
-git clone https://github.com/Hyun-je/velodyne_wt61c-ros ~/catkin_ws/src
+git clone --recursive https://github.com/Hyun-je/velodyne_wt61c-ros ~/catkin_ws/src
 
 # 3. Run catkin_make
 cd ~/catkin_ws && catkin_make
@@ -18,7 +18,7 @@ cd ~/catkin_ws && catkin_make
 ### Docker
 ```
 # 1. Clone source code
-git clone https://github.com/Hyun-je/velodyne_wt61c-ros
+git clone --recursive https://github.com/Hyun-je/velodyne_wt61c-ros
 
 # 2. Build Dockerfile
 docker build -t ros:velodyne_wt61c .
