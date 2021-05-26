@@ -1,1 +1,1 @@
-docker build -t ros:velodyne-record .
+docker build -t velodyne_wt61c .
