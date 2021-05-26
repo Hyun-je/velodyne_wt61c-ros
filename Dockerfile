@@ -11,7 +11,7 @@ RUN echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc && \
 
 # Copy source files
 WORKDIR /root/catkin_ws/src
-COPY ./src ./velodyne_wt61c-ROS
+COPY ./src ./velodyne_wt61c
 
 # Build
 WORKDIR /root/catkin_ws
