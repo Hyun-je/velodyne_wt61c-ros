@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <package format="2">
 
-  <name>velodyne_record</name>
+  <name>velodyne_wt61c</name>
   <version>0.0.0</version>
-  <description>The velodyne_record package</description>
+  <description>The velodyne_wt61c package</description>
   <maintainer email="bigae2@gmail.com">Hyun-je</maintainer>
   <license>MIT</license>
 
