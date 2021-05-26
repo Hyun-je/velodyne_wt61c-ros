@@ -1,33 +1,42 @@
-# velodyne_wt61c-ROS
-
+# velodyne_wt61c-ros
 
 
 ## How to Build
 ### Ubuntu Native (Bionic + ROS Melodic)
-1. Install dependencies
-``` sh
+
+```
+# 1. Install dependencies
 sudo apt-get install ros-melodic-velodyne ros-melodic-serial
-```
-2. Clone source code
-``` sh
-git clone https://github.com/Hyun-je/velodyne_wt61c-ROS ~/catkin_ws/src
-```
-3. Run ```catkin_make```
-``` sh
+
+# 2. Clone source code
+git clone https://github.com/Hyun-je/velodyne_wt61c-ros ~/catkin_ws/src
+
+# 3. Run catkin_make
 cd ~/catkin_ws && catkin_make
 ```
 
 ### Docker
-1. Clone source code
-``` sh
-git clone https://github.com/Hyun-je/velodyne_wt61c-ROS
 ```
-2. Build Dockerfile
-``` sh
-docker build -t ros:velodyne-record .
+# 1. Clone source code
+git clone https://github.com/Hyun-je/velodyne_wt61c-ros
+
+# 2. Build Dockerfile
+docker build -t ros:velodyne_wt61c .
+
+# 3. Run docker container
+xhost +local:docker       # allow docker gui mode (Ubuntu)
+docker run -it --privileged --env=DISPLAY --network=host -v /dev:/dev -v /tmp/.X11-unix:/tmp/.X11-unix -v ~/rosbag:/root/rosbag ros:velodyne_wt61c
 ```
-3. Run docker container
+
+## How to Use
+### Monitor 
+Run rviz only
 ``` sh
-xhost +local:docker       # allow docker gui mode
-docker run -it --privileged --env=DISPLAY --network=host -v /dev:/dev -v /tmp/.X11-unix:/tmp/.X11-unix -v ~/rosbag:/root/rosbag ros:velodyne-record
+roslaunch velodyne_wt61c monitor.launch
+```
+
+### Record
+Run rviz & rosbag. bag files will be saved in `/root/rosbag`.
+``` sh
+roslaunch velodyne_wt61c record.launch
 ```
