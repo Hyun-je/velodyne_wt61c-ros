@@ -42,3 +42,7 @@ Run rviz & rosbag. bag files will be saved in `/root/rosbag`.
 ``` sh
 roslaunch velodyne_wt61c record.launch
 ```
+
+## References
+- ROS Velodyne  http://wiki.ros.org/velodyne/Tutorials/Getting%20Started%20with%20the%20Velodyne%20VLP16
+- WitMotion WT61C  https://www.wit-motion.com/6-axis/witmotion-wt61c-ttl-ahrs-6.html
