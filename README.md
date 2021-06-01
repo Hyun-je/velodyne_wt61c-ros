@@ -1,6 +1,6 @@
 # velodyne_wt61c-ros
-![Velodyne_Puck](https://user-images.githubusercontent.com/7419790/120263250-4452d080-c2d6-11eb-811e-f372ee1fb88d.png)
-![60555d711b5d1](https://user-images.githubusercontent.com/7419790/120263253-461c9400-c2d6-11eb-8f5c-45526414ae87.png)
+![Velodyne_Puck](https://user-images.githubusercontent.com/7419790/120263584-f38fa780-c2d6-11eb-90f7-ae16936fd36e.png)
+![60555d711b5d1](https://user-images.githubusercontent.com/7419790/120263588-f5596b00-c2d6-11eb-89bd-3421208bfbd7.png)
 
 
 ## How to Build
