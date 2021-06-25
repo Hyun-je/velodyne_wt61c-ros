@@ -1,0 +1,22 @@
+<launch>
+  <param name="/use_sim_time" value="true" />
+
+  <param name="robot_description" textfile="$(find velodyne_wt61c)/urdf/sensor_suite.urdf" />
+
+  <!-- Run Robot State Publisher -->	
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+  <!-- Run Cartographer -->
+  <node name="cartographer_node" pkg="cartographer_ros" type="cartographer_node" output="screen"
+	args="-configuration_directory $(find velodyne_wt61c)/configuration -configuration_basename cartographer_velodyne.lua">
+    <remap from="points2" to="/velodyne_points" />
+    <remap from="imu" to="/imu" />
+  </node>
+
+  <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros" type="cartographer_occupancy_grid_node"
+  args="-resolution 0.05" />
+
+  <!-- Run Rviz (Display) -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find velodyne_wt61c)/rviz/slam.rviz"/>
+
+</launch>
