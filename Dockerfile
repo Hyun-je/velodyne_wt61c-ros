@@ -3,7 +3,9 @@ FROM osrf/ros:melodic-desktop-full-bionic
 # Install dependencies
 RUN apt-get update && apt-get install -y \
     ros-melodic-serial \
-    ros-melodic-velodyne
+    ros-melodic-velodyne \
+    ros-melodic-cartographer \
+    ros-melodic-cartographer-ros
 
 # Setup ROS environment
 RUN echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc && \
