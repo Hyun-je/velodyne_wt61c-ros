@@ -52,3 +52,4 @@ roslaunch velodyne_wt61c slam.launch
 ## References
 - ROS Velodyne  http://wiki.ros.org/velodyne/Tutorials/Getting%20Started%20with%20the%20Velodyne%20VLP16
 - WitMotion WT61C  https://www.wit-motion.com/6-axis/witmotion-wt61c-ttl-ahrs-6.html
+- Cartographer  https://google-cartographer-ros.readthedocs.io/en/latest/
