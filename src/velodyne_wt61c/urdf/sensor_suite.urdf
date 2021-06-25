@@ -2,12 +2,21 @@
 
   <link name="base_link" />
 
+  <link name="imu_link" />
+
   <link name="wt61c_uart" />
 
   <link name="velodyne" />
 
-  <joint name="wt61c_uart_joint" type="fixed">
+
+  <joint name="imu_link_joint" type="fixed">
     <parent link="base_link" />
+    <child link="imu_link" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+
+  <joint name="wt61c_uart_joint" type="fixed">
+    <parent link="imu_link" />
     <child link="wt61c_uart" />
     <origin xyz="0 0 0" rpy="0 0 0" />
   </joint>
