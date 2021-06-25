@@ -42,6 +42,12 @@ Run rviz & rosbag. bag files will be saved in `/root/rosbag`.
 ``` sh
 roslaunch velodyne_wt61c record.launch
 ```
+## SLAM
+Run Cartographer SLAM
+``` sh
+roslaunch velodyne_wt61c slam.launch
+```
+
 
 ## References
 - ROS Velodyne  http://wiki.ros.org/velodyne/Tutorials/Getting%20Started%20with%20the%20Velodyne%20VLP16
