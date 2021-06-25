@@ -16,6 +16,6 @@
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find velodyne_wt61c)/rviz/monitor.rviz"/>
 
   <!-- Run Rosbag -->
-  <node pkg="rosbag" type="record" args="-a -o $(env HOME)/rosbag/ /velodyne_points /orientation_acceleration" name="record" output="screen"/>
+  <node pkg="rosbag" type="record" args="-a --split --duration=3m -o $(env HOME)/rosbag/ /velodyne_points /orientation_acceleration" name="record" output="screen"/>
 
 </launch>
