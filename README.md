@@ -45,7 +45,7 @@ roslaunch velodyne_wt61c record.launch
 ## SLAM
 Run Cartographer SLAM
 ``` sh
-roslaunch velodyne_wt61c slam.launch
+roslaunch velodyne_wt61c slam_online.launch
 ```
 
 
