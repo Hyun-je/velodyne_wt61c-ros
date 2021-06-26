@@ -14,7 +14,7 @@ int main(int argc, char** argv)
 	while(wt61cuart.UartInit()){
 		sleep(1);}      //declare the uart port
 
-	ros::Rate loop_rate(1000);
+	ros::Rate loop_rate(10);
 
 	while(ros::ok()){
 		wt61cuart.GetAndCheck();
