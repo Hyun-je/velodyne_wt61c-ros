@@ -31,10 +31,12 @@ options = {
 TRAJECTORY_BUILDER_3D.num_accumulated_range_data = 1
 TRAJECTORY_BUILDER_3D.min_range = 0.5
 TRAJECTORY_BUILDER_3D.max_range = 25.0
+TRAJECTORY_BUILDER_3D.voxel_filter_size = 0.3
 TRAJECTORY_BUILDER_3D.use_online_correlative_scan_matching = true
+TRAJECTORY_BUILDER_3D.ceres_scan_matcher.ceres_solver_options.num_threads = 8
 
 MAP_BUILDER.use_trajectory_builder_3d = true
-MAP_BUILDER.num_background_threads = 7
+MAP_BUILDER.num_background_threads = 8
 
 POSE_GRAPH.optimization_problem.huber_scale = 5e2
 POSE_GRAPH.optimize_every_n_nodes = 320
