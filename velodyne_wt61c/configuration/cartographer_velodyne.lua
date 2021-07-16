@@ -28,10 +28,14 @@ options = {
   landmarks_sampling_ratio = 1.,
 }
 
-TRAJECTORY_BUILDER_3D.num_accumulated_range_data = 1
-TRAJECTORY_BUILDER_3D.min_range = 0.5
-TRAJECTORY_BUILDER_3D.max_range = 25.0
-TRAJECTORY_BUILDER_3D.voxel_filter_size = 0.3
+
+
+TRAJECTORY_BUILDER_3D.num_accumulated_range_data = 0
+TRAJECTORY_BUILDER_3D.min_range = 1.0
+TRAJECTORY_BUILDER_3D.max_range = 20.0
+TRAJECTORY_BUILDER_3D.voxel_filter_size = 0.1
+TRAJECTORY_BUILDER_3D.submaps.high_resolution = 0.2
+TRAJECTORY_BUILDER_3D.submaps.low_resolution = 0.5
 TRAJECTORY_BUILDER_3D.use_online_correlative_scan_matching = true
 TRAJECTORY_BUILDER_3D.ceres_scan_matcher.ceres_solver_options.num_threads = 8
 
@@ -44,5 +48,6 @@ POSE_GRAPH.constraint_builder.sampling_ratio = 0.03
 POSE_GRAPH.optimization_problem.ceres_solver_options.max_num_iterations = 10
 POSE_GRAPH.constraint_builder.min_score = 0.62
 POSE_GRAPH.constraint_builder.global_localization_min_score = 0.66
+
 
 return options
