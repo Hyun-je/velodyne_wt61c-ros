@@ -35,6 +35,7 @@ namespace WTU {
 		int TranslateAndPub();
 		int UartInit();
 		int GetAndCheck();
+		void ClearUart();
 	};
 }
 #endif

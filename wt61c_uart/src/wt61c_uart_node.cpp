@@ -14,12 +14,19 @@ int main(int argc, char** argv)
 	while(wt61cuart.UartInit()){
 		sleep(1);}      //declare the uart port
 
-	ros::Rate loop_rate(10);
+	ros::Rate loop_rate(100);
 
+	int i = 0;
 	while(ros::ok()){
 		wt61cuart.GetAndCheck();
-		wt61cuart.TranslateAndPub();
-		
+
+		i++;
+		if(i > 10) {
+			wt61cuart.TranslateAndPub();
+			i = 0;
+		}
+
+		wt61cuart.ClearUart();
 		loop_rate.sleep();
 	}
 	return 0;

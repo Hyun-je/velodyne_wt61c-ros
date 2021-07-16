@@ -92,6 +92,15 @@ int WTU::Wt61cUart::GetAndCheck() {
 	}	
 }
 
+void WTU::Wt61cUart::ClearUart() {
+
+	//delate the old date	
+	index_ =index_+ 32;
+	UartData_.erase(UartData_.begin(),UartData_.begin()+index_);
+	index_ = 0;
+
+}
+
 // translate UartDate to Imu date,and pub
 int WTU::Wt61cUart::TranslateAndPub() {
 	sensor_msgs::Imu wt61c_imu;                //declare the pub message
@@ -143,12 +152,5 @@ int WTU::Wt61cUart::TranslateAndPub() {
 
 	wt61c_pub_.publish(wt61c_imu);
 	
-	//delate the old date	
-	index_ =index_+ 32;
-	UartData_.erase(UartData_.begin(),UartData_.begin()+index_);
-	index_ = 0;
-	ROS_INFO("The data has been pub.");	
-	// wt61c_turtle_.publish(turtle);
-
 	return 0;
 }
